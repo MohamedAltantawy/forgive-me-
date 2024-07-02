@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>love game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div class="box">
+            <h1>Can you forgive me?</h1>
+            <button id="target">No</button>
+            <button id="yes">Yes</button>
+        </div>
+    </div>
+
+
+    <script>
+        const target = document.getElementById('target');
+        function moveTarget() {
+            const maxWidth = window.innerWidth - 150;
+            const maxHeight = window.innerHeight - 300;
+
+            const randomX = Math.floor(Math.random() * maxWidth);
+            const randomY = Math.floor(Math.random() * maxHeight);
+
+            target.style.left = randomX + 'px';
+            target.style.top = randomY + 'px';
+        }
+
+        target.addEventListener('click', function() {
+            moveTarget();
+        });
+
+        const yes = document.getElementById('yes');
+        yes.addEventListener('click', () => {
+            alert("Thank you😍 والله بحبك يامنار💓😁");
+        });
+    </script>
+</body>
+</html>
